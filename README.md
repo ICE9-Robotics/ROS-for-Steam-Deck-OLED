@@ -6,6 +6,7 @@
   * [2. Robostack](#2-robostack)
 - [Using Robostack ROS](#using-robostack-ros)
   * [ROS packages](#ros-packages)
+- [Foxglove Studio](#foxglove-studio)
 
 # ROS-for-Steam-Deck-OLED
 All we know about using Steam Deck OLED (SDO) for ROS.
