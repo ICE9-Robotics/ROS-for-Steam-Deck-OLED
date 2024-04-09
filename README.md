@@ -56,6 +56,15 @@ git show -s --format=%s HEAD # make sure it says 12.3.1
 makepkg -si
 ```
 
+7. (optional) Boot straight into desktop
+```
+/usr/bin/steamos-session-select plasma-wayland-persistent
+```
+To reverse it
+```
+/usr/bin/steamos-session-select gamescope
+```
+
 ## ROS and ROS2
 You have at least two options to run ROS/ROS2 on SteamOS: 1. a native installation and 2. a stack envrionment using conda. We prefer the second approach as it is safe and flexible.
 
@@ -117,7 +126,7 @@ You need to first activate the envrionment.
 ```sh
 mamba activate noetic_env
 ```
-After this, you can use ROS commands as if you were using Ubuntu, e.g. `roscore`, `roslaunch`, etc. Graphics interfaces such as `rviz` and `rqt` also work well.
+After this, you can source your workspace, export ROS_MASTER_URI etc., and use ROS commands as if you were using Ubuntu, e.g. `roscore`, `roslaunch`, etc. Graphics interfaces such as `rviz` and `rqt` also work well.
 
 ### ROS packages
 There are a limited number of packages that can be directly installed. You can find a list of packages on their website, e.g. [Available Packages/ROS1 Noetic](https://robostack.github.io/noetic.html). Note that new packages will be added over time.
