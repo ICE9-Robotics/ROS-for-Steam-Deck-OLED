@@ -8,7 +8,7 @@
   * [ROS packages](#ros-packages)
 - [Foxglove Studio](#foxglove-studio)
 
-![foxglove_on_steamdeck.jpeg](files/foxglove_on_steamdeck.jpeg)
+![foxglove_on_steamdeck.jpeg](files/foxglove_on_steamdeck.png)
 
 # ROS-for-Steam-Deck-OLED
 All we know about using Steam Deck OLED (SDO) for ROS.
