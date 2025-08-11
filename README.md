@@ -11,9 +11,8 @@
 ![foxglove_on_steamdeck.jpeg](files/foxglove_on_steamdeck.png)
 
 # ROS-for-Steam-Deck-OLED
-All we know about using Steam Deck OLED (SDO) for ROS.
 
-## Native Ubuntu installation
+#### Native Ubuntu?
 OLED does not support Ubuntu, at least none of the LTS versions from 16.04 to 22.04. After unsuccessful attempts of installing Ubuntu on SDO, we resolve to relying on the original SteamOS which is a modified Arch Linux system.
 
 ## Prepare SteamOS
@@ -66,7 +65,12 @@ To reverse it
 ```
 
 ## ROS and ROS2
-You have at least two options to run ROS/ROS2 on SteamOS: 1. a native installation and 2. a stack envrionment using conda. We prefer the second approach as it is safe and flexible.
+You have at least two options to run ROS/ROS2 on SteamOS: 
+
+1. a native installation;
+2. a stack envrionment using conda.
+ 
+We prefer the **second** approach as it is safe and flexible.
 
 ### 1. Native installation
 Warning: your milage may vary, especially after Arch linux and/or SteamOS update.
@@ -146,13 +150,15 @@ You can also use `catkin_make` to build and install any unlisted packages like w
 ## Foxglove Studio
 [Foxglove Studio](https://app.foxglove.dev) is a visulisation tool that can be used instead of RVIZ and with the added benefit of not requiring any ROS installation or envrionment. Unless you plan to use the software in a large team with a lot of teamwise co-operation, it is free-of-charge.
 
-The latest Foxglove package, at the time of writing, is outdated. To install the latest version (2.0.1):
+The latest Foxglove package from Arch linux repository, at the time of writing, was outdated. To install the latest version (2.0.1) at the time, we have to pull it from the official website:
 ```sh
 mkdir foxglove-studio-bin
 cd foxglove-studio-bin
 wget https://raw.githubusercontent.com/ICE9-Robotics/ROS-for-Steam-Deck-OLED/main/files/pkgbuild_foxglove -O PKGBUILD
 makepkg -si
 ```
+
+You can download a newer version, if it is available, by updating the `pkgver` parameter in the [pkgbuild_foxglove](files/pkgbuild_foxglove) file and rename it to `PKGBUILD`, followed by running the `makepkg -si` command.
 
 ----
 <sup>Table of contents generated with <a href='http://ecotrust-canada.github.io/markdown-toc/'>markdown-toc</a></sup>
