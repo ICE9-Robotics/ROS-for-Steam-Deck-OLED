@@ -158,7 +158,7 @@ wget https://raw.githubusercontent.com/ICE9-Robotics/ROS-for-Steam-Deck-OLED/mai
 makepkg -si
 ```
 
-You can download a newer version, if it is available, by updating the `pkgver` parameter in the [pkgbuild_foxglove](files/pkgbuild_foxglove) file and rename it to `PKGBUILD`, followed by running the `makepkg -si` command.
+You can download a newer version, if it is available, by updating the `pkgver` parameter in [pkgbuild_foxglove](files/pkgbuild_foxglove) and rename the file to `PKGBUILD`, followed by running the `makepkg -si` command within the same directory of the file.
 
 ----
 <sup>Table of contents generated with <a href='http://ecotrust-canada.github.io/markdown-toc/'>markdown-toc</a></sup>
