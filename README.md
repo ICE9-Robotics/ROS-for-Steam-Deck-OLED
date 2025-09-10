@@ -1,5 +1,5 @@
 # Table of Contents
-- [Native Ubuntu installation](#native-ubuntu-installation)
+- [Native Ubuntu?](#native-ubuntu?)
 - [Prepare SteamOS](#prepare-steamos)
 - [ROS and ROS2](#ros-and-ros2)
   * [1. Native installation](#1-native-installation)
@@ -33,7 +33,8 @@ sudo pacman-key --populate archlinux
 ```
 
 4. Trust all signiture
-This is a dangerous move but it seems there is no other way around (I am not an expert in Linux though). Without trust all package signitures, you can't use pacman to install anything. Just be careful with what you are installing.
+ 
+<sup>Warning: this may allow you to install malware. Be careful with what you are installing.</sup>
 
 This can be done by setting `SigLevel` to `TrustAll` in /etc/pacman.conf.
 ```sh
@@ -46,6 +47,7 @@ sudo pacman -Sy code
 ```
 
 6. (optional) Install Yay
+
 The latest Yay (12.3.5 at the time of writing) does not work with SteamOS. Instead, we can use 12.3.1.
 ```sh
 git clone https://aur.archlinux.org/yay.git
@@ -55,7 +57,7 @@ git show -s --format=%s HEAD # make sure it says 12.3.1
 makepkg -si
 ```
 
-7. (optional) Boot straight into desktop
+7. (optional) Set to load Linux desktop instead of Steam interface on boot.
 ```
 /usr/bin/steamos-session-select plasma-wayland-persistent
 ```
@@ -159,6 +161,3 @@ makepkg -si
 ```
 
 You can download a newer version, if it is available, by updating the `pkgver` parameter in [pkgbuild_foxglove](files/pkgbuild_foxglove) and rename the file to `PKGBUILD`, followed by running the `makepkg -si` command within the same directory of the file.
-
-----
-<sup>Table of contents generated with <a href='http://ecotrust-canada.github.io/markdown-toc/'>markdown-toc</a></sup>
