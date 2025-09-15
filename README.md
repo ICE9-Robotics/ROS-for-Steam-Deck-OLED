@@ -168,3 +168,9 @@ You can download a newer version, if it is available, by updating the `pkgver` p
    - Keep your dock/hub plugged in while Steam deck is powered on.
    - Hold `volume -` button and `...` button at the same time for 5-8 seconds until you hear a beep
    - Unplug and replug in your dock/hub, your USB device should work now.
+2. `mamba` complaints about `ModuleNotFoundEorr`:
+   - Your mamba installation is broken, try reinstall:
+```
+conda uninstall mamba
+conda install mamba -c conda-forge
+```
