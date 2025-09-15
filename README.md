@@ -27,7 +27,7 @@ passwd
 sudo steamos-readonly disable
 ```
 
-3. Configue pacman
+3. Configue pacman (Required for installing binary packages from AUR)
 ```sh
 sudo pacman-key --init
 sudo pacman-key --populate archlinux
@@ -47,7 +47,7 @@ sudo sed 's/SigLevel.*/SigLevel = TrustAll/g;' /etc/pacman.conf
 sudo pacman -Sy code
 ```
 
-6. (optional) Install Yay
+6. (optional) Install Yay (Makes installing from AUR easier)
 
 The latest Yay (12.3.5 at the time of writing) does not work with SteamOS. Instead, we can use 12.3.1.
 ```sh
@@ -164,13 +164,23 @@ makepkg -si
 You can download a newer version, if it is available, by updating the `pkgver` parameter in [pkgbuild_foxglove](files/pkgbuild_foxglove) and rename the file to `PKGBUILD`, followed by running the `makepkg -si` command within the same directory of the file.
 
 ## Troubleshooting
-1. USB ports on your dock/hub stop working:
-   - Keep your dock/hub plugged in while Steam deck is powered on.
-   - Hold `volume -` button and `...` button at the same time for 5-8 seconds until you hear a beep
-   - Unplug and replug in your dock/hub, your USB device should work now.
-2. `mamba` complaints about `ModuleNotFoundEorr`:
-   - Your mamba installation is broken, try reinstall:
+#### USB ports on your dock/hub stop working:
+1. Keep your dock/hub plugged in while Steam deck is powered on.
+2. Hold `volume -` button and `...` button at the same time for 5-8 seconds until you hear a beep
+3. Unplug and replug in your dock/hub, your USB device should work now.
+     
+<sub>Credit: https://steamcommunity.com/app/1675200/discussions/3/6063574513305899672/ </sub>
+
+#### `mamba` complaints about `ModuleNotFoundEorr`:
+Your mamba installation is broken, try reinstall:
 ```
 conda uninstall mamba
 conda install mamba -c conda-forge
 ```
+
+#### Cannot find fakeroot binary
+Install fakeroot with overwrite:
+```
+sudo pacman -Sy --overwrite \* fakeroot
+```
+<sub>Credit: https://www.reddit.com/r/SteamDeck/comments/ytmjpr/comment/j5avzpy/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button</sub>
