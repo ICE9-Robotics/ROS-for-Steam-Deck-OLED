@@ -7,7 +7,8 @@
 - [Using Robostack ROS](#using-robostack-ros)
   * [ROS packages](#ros-packages)
 - [Foxglove Studio](#foxglove-studio)
-
+- [Troubleshooting](#troubleshooting)
+  
 ![foxglove_on_steamdeck.jpeg](files/foxglove_on_steamdeck.png)
 
 # ROS-for-Steam-Deck-OLED
@@ -23,7 +24,7 @@ passwd
 
 2. Disable read only file system
 ```sh
-steamos-readonly disable
+sudo steamos-readonly disable
 ```
 
 3. Configue pacman
@@ -161,3 +162,9 @@ makepkg -si
 ```
 
 You can download a newer version, if it is available, by updating the `pkgver` parameter in [pkgbuild_foxglove](files/pkgbuild_foxglove) and rename the file to `PKGBUILD`, followed by running the `makepkg -si` command within the same directory of the file.
+
+## Troubleshooting
+1. USB ports on your dock/hub stop working:
+   - Keep your dock/hub plugged in while Steam deck is powered on.
+   - Hold `volume -` button and `...` button at the same time for 5-8 seconds until you hear a beep
+   - Unplug and replug in your dock/hub, your USB device should work now.
