@@ -51,10 +51,8 @@ sudo pacman -Sy code
 
 The latest Yay (12.3.5 at the time of writing) does not work with SteamOS. Instead, we can use 12.3.1.
 ```sh
-git clone https://aur.archlinux.org/yay.git
-cd yay
-git checkout 17f4503492f5070ebcca58743144773c89099dff
-git show -s --format=%s HEAD # make sure it says 12.3.1
+git clone https://aur.archlinux.org/yay-bin.git
+cd yay-bin
 makepkg -si
 ```
 
